@@ -8,7 +8,7 @@ class ProcedureDetailOut(BaseModel):
 
     id: int
     title: str
-    price: int
+    price: str
     description: str
     category_id: int
     category_title: str

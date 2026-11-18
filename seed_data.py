@@ -1,5 +1,5 @@
 from sqlalchemy import select
-
+import asyncio
 from database import Categories, Procedures, SessionLocal
 
 
@@ -477,3 +477,7 @@ async def get_generate_table() -> None:
         ]
         session.add_all(procedures_list)
         await session.commit()
+
+
+if __name__ == "__main__":
+    asyncio.run(get_generate_table())

@@ -8,7 +8,7 @@ class ProcedureShortOut(BaseModel):
 
     id: int
     title: str
-    price: int
+    price: str
 
 
 class CategoryOut(BaseModel):

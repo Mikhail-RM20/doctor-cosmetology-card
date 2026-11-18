@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Косметолог Иван Игоревич — Эстетическая косметология, пирсинг, массаж</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Marck+Script&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css?v=2">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="/" class="logo" data-route="/">
+                <span class="logo__title">Косметолог Иван Игоревич</span>
+                <span class="logo__subtitle">Косметология • Пирсинг • Массаж</span>
+            </a>
+
+            <nav class="nav" id="mainNav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="/" class="nav__link active" data-route="/">Главная</a></li>
+
+                    <li class="nav__item nav__item--dropdown" id="servicesDropdown">
+                        <button type="button" class="nav__link nav__dropdown-btn" id="servicesToggle">
+                            Услуги
+                            <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+
+                        <div class="catalog-menu" id="catalogMenu">
+                            <div class="catalog-menu__categories" id="catalogCategories">
+                                <div class="catalog-loading">Загрузка прайс-листа...</div>
+                            </div>
+                            <div class="catalog-menu__procedures" id="catalogProcedures">
+                                <div class="catalog-placeholder">Выберите направление, чтобы открыть процедуры и цены</div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav__item"><a href="/about" class="nav__link" data-route="/about">Обо мне</a></li>
+                    <li class="nav__item"><a href="/faq" class="nav__link" data-route="/faq">Частые вопросы</a></li>
+                    <li class="nav__item"><a href="/works" class="nav__link" data-route="/works">Мои работы</a></li>
+                </ul>
+
+                <div class="nav__mobile-contacts">
+                    <a href="tel:+79029081296" class="btn btn--gold btn--full">+7 (902) 908-12-96</a>
+                    <div class="social-row">
+                        <a href="https://t.me/Ivan_Igorevich71" target="_blank" rel="noopener" class="social-chip">Telegram</a>
+                        <a href="https://vk.ru/ivanmedicina" target="_blank" rel="noopener" class="social-chip">Личный ВК</a>
+                        <a href="https://vk.ru/club222325874" target="_blank" rel="noopener" class="social-chip">Группа ВК</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="header__actions">
+                <a href="tel:+79029081296" class="header__phone">+7 (902) 908-12-96</a>
+                <a href="https://t.me/Ivan_Igorevich71" target="_blank" rel="noopener" class="btn btn--gold btn--sm">Telegram</a>
+            </div>
+
+            <button type="button" class="burger" id="burgerBtn" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main" id="appContent">
+
+        <section class="page active" id="page-home">
+            <div class="hero">
+                <div class="container hero__center">
+                    <div class="gold-eyebrow">Медицинская косметология • Тульская область</div>
+
+                    <div class="hero__ornament">
+                        <span></span><i>✦</i><span></span>
+                    </div>
+
+                    <h1 class="hero__script-name">Косметолог Иван Игоревич</h1>
+                    <p class="hero__tagline">Искусство деликатного омоложения и естественной гармонии</p>
+
+                    <p class="hero__desc">
+                        Инъекционная и аппаратная косметология, контурная пластика, ботулинотерапия, эстетический пирсинг и оздоровительный массаж. Медицинская точность, сертифицированные препараты и индивидуальный подход к вашей красоте.
+                    </p>
+
+                    <div class="hero__buttons hero__buttons--center">
+                        <a href="tel:+79029081296" class="btn btn--gold">
+                            <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span>+7 (902) 908-12-96</span>
+                        </a>
+
+                        <a href="https://t.me/Ivan_Igorevich71" target="_blank" rel="noopener" class="btn btn--social btn--tg">
+                            <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                            </svg>
+                            <span>Telegram</span>
+                        </a>
+
+                        <a href="https://vk.ru/ivanmedicina" target="_blank" rel="noopener" class="btn btn--social btn--vk">
+                            <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.44-.86-.83-1.24-.94-1.46-.94-.3 0-.38.08-.38.49v1.32c0 .36-.11.57-1.04.57-1.54 0-3.25-.93-4.45-2.67-1.81-2.54-2.3-4.45-2.3-4.84 0-.22.08-.42.49-.42h1.46c.37 0 .51.17.65.56.71 2.06 1.91 3.86 2.4 3.86.18 0 .27-.08.27-.55v-2.14c-.06-.99-.58-1.07-.58-1.42 0-.17.14-.34.37-.34h2.29c.31 0 .42.17.42.53v2.89c0 .31.14.42.23.42.18 0 .34-.11.68-.45 1.05-1.18 1.8-3 1.8-3 .1-.21.27-.42.64-.42h1.46c.44 0 .53.22.44.53-.18.85-1.95 3.34-1.95 3.34-.15.25-.21.36 0 .64.15.21.66.65 1 1.04.62.71 1.1 1.3 1.23 1.71.13.42-.07.63-.49.63z"/>
+                            </svg>
+                            <span>Личный ВК</span>
+                        </a>
+
+                        <a href="https://vk.ru/club222325874" target="_blank" rel="noopener" class="btn btn--social btn--vk">
+                            <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.44-.86-.83-1.24-.94-1.46-.94-.3 0-.38.08-.38.49v1.32c0 .36-.11.57-1.04.57-1.54 0-3.25-.93-4.45-2.67-1.81-2.54-2.3-4.45-2.3-4.84 0-.22.08-.42.49-.42h1.46c.37 0 .51.17.65.56.71 2.06 1.91 3.86 2.4 3.86.18 0 .27-.08.27-.55v-2.14c-.06-.99-.58-1.07-.58-1.42 0-.17.14-.34.37-.34h2.29c.31 0 .42.17.42.53v2.89c0 .31.14.42.23.42.18 0 .34-.11.68-.45 1.05-1.18 1.8-3 1.8-3 .1-.21.27-.42.64-.42h1.46c.44 0 .53.22.44.53-.18.85-1.95 3.34-1.95 3.34-.15.25-.21.36 0 .64.15.21.66.65 1 1.04.62.71 1.1 1.3 1.23 1.71.13.42-.07.63-.49.63z"/>
+                            </svg>
+                            <span>Группа ВК</span>
+                        </a>
+                    </div>
+
+                    <div class="hero__metrics">
+                        <div class="metric-box">
+                            <span class="metric-box__val">7+ лет</span>
+                            <span class="metric-box__lbl">практического опыта</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-box__val">РязГМУ</span>
+                            <span class="metric-box__lbl">медицинское образование</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-box__val">41 услуга</span>
+                            <span class="metric-box__lbl">косметология, пирсинг, массаж</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section section--cream">
+                <div class="container">
+                    <div class="text-center">
+                        <div class="gold-eyebrow">Стандарты качества</div>
+                        <h2 class="section__title">Основы профессиональной косметологии</h2>
+                        <p class="section__subtitle">Безопасность, медицинская точность и эстетический результат</p>
+                    </div>
+
+                    <div class="grid-3">
+                        <div class="feature-card">
+                            <span class="feature-card__num">01</span>
+                            <h3>Медицинский фундамент</h3>
+                            <p>Высшее медицинское образование (РязГМУ им. И.П. Павлова), опыт работы в частной клинике и безупречное знание анатомии.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <span class="feature-card__num">02</span>
+                            <h3>Гармония и естественность</h3>
+                            <p>Мужской взгляд на женскую красоту — это умение подчеркнуть достоинства и освежить черты лица без лишних объёмов.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <span class="feature-card__num">03</span>
+                            <h3>Официальность и стерильность</h3>
+                            <p>Действующая медицинская книжка, дипломы и сертификаты, одноразовые стерильные расходники и сертифицированные препараты.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="container">
+                    <div class="text-center">
+                        <div class="gold-eyebrow">География приёма</div>
+                        <h2 class="section__title">Кабинеты в Тульской области</h2>
+                        <p class="section__subtitle">Нажмите на город, чтобы посмотреть расположение на карте</p>
+                    </div>
+
+                    <div class="grid-3 locations-grid">
+                        <div class="location-card active" data-city="tula">
+                            <span class="location-card__city">г. Тула</span>
+                            <p class="location-card__address">ул. Кирова, 149а</p>
+                            <span class="location-card__hint">Смотреть на карте →</span>
+                        </div>
+
+                        <div class="location-card" data-city="bogoroditsk">
+                            <span class="location-card__city">г. Богородицк</span>
+                            <p class="location-card__address">ул. Пролетарская, 36а, ТЦ «Восточный», 2 этаж</p>
+                            <span class="location-card__hint">Смотреть на карте →</span>
+                        </div>
+
+                        <div class="location-card" data-city="efremov">
+                            <span class="location-card__city">г. Ефремов</span>
+                            <p class="location-card__address">ул. Ленина, д. 31, Студия «Апельсин»</p>
+                            <span class="location-card__hint">Смотреть на карте →</span>
+                        </div>
+                    </div>
+
+                    <div class="map-wrapper">
+                        <iframe id="yandexMapFrame" src="https://yandex.ru" width="100%" height="420" frameborder="0" allowfullscreen="true"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page" id="page-procedure">
+            <div class="container">
+                <button type="button" class="back-btn" id="backFromProcedure">← Вернуться на главную</button>
+                <div class="procedure-detail" id="procedureDetailContainer"></div>
+            </div>
+        </section>
+
+        <section class="page" id="page-about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-photo-blend">
+                        <img src="/images/hero/hero.jpg" alt="Косметолог Иван Игоревич" class="about-photo">
+                    </div>
+
+                    <div class="about-content">
+                        <div class="gold-eyebrow">Тульская область • О специалисте</div>
+                        <h1 class="about-script-title">Косметолог Иван Игоревич</h1>
+                        <p class="about-subtitle-gold">Косметолог с медицинским образованием • Мужской взгляд на женскую красоту</p>
+
+                        <p class="about-lead">Творю для вас более <strong>7 лет</strong>. Специалист, которого советуют близким и друзьям за деликатный подход, честность и предсказуемый эстетический результат.</p>
+
+                        <div class="about-cards">
+                            <div class="about-card">
+                                <h3>Высшее медицинское образование</h3>
+                                <p>Заканчивал филиал <strong>Рязанского государственного медицинского университета имени академика И.П. Павлова (РязГМУ)</strong>. Глубокие знания анатомии позволяют работать максимально безопасно и точно.</p>
+                            </div>
+
+                            <div class="about-card">
+                                <h3>Квалификация в трёх направлениях</h3>
+                                <p>Являюсь квалифицированным специалистом в области <strong>косметологии</strong>, <strong>оздоровительного массажа</strong> и <strong>косметического пирсинга</strong>.</p>
+                            </div>
+
+                            <div class="about-card">
+                                <h3>Официальный стаж и документы</h3>
+                                <p>В наличии медицинская книжка, трудовая книжка с подтверждённым опытом работы в частной клинике, а также все дипломы и сертификаты.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-vk-note">
+                            <p>Вся подробная информация, живые отзывы и актуальные новости — на личной странице в ВК и в других соцсетях:</p>
+
+                            <div class="hero__buttons">
+                                <a href="https://vk.ru/ivanmedicina" target="_blank" rel="noopener" class="btn btn--social btn--vk">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.44-.86-.83-1.24-.94-1.46-.94-.3 0-.38.08-.38.49v1.32c0 .36-.11.57-1.04.57-1.54 0-3.25-.93-4.45-2.67-1.81-2.54-2.3-4.45-2.3-4.84 0-.22.08-.42.49-.42h1.46c.37 0 .51.17.65.56.71 2.06 1.91 3.86 2.4 3.86.18 0 .27-.08.27-.55v-2.14c-.06-.99-.58-1.07-.58-1.42 0-.17.14-.34.37-.34h2.29c.31 0 .42.17.42.53v2.89c0 .31.14.42.23.42.18 0 .34-.11.68-.45 1.05-1.18 1.8-3 1.8-3 .1-.21.27-.42.64-.42h1.46c.44 0 .53.22.44.53-.18.85-1.95 3.34-1.95 3.34-.15.25-.21.36 0 .64.15.21.66.65 1 1.04.62.71 1.1 1.3 1.23 1.71.13.42-.07.63-.49.63z"/>
+                                    </svg>
+                                    <span>Личный ВК</span>
+                                </a>
+
+                                <a href="https://vk.ru/club222325874" target="_blank" rel="noopener" class="btn btn--social btn--vk">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.44-.86-.83-1.24-.94-1.46-.94-.3 0-.38.08-.38.49v1.32c0 .36-.11.57-1.04.57-1.54 0-3.25-.93-4.45-2.67-1.81-2.54-2.3-4.45-2.3-4.84 0-.22.08-.42.49-.42h1.46c.37 0 .51.17.65.56.71 2.06 1.91 3.86 2.4 3.86.18 0 .27-.08.27-.55v-2.14c-.06-.99-.58-1.07-.58-1.42 0-.17.14-.34.37-.34h2.29c.31 0 .42.17.42.53v2.89c0 .31.14.42.23.42.18 0 .34-.11.68-.45 1.05-1.18 1.8-3 1.8-3 .1-.21.27-.42.64-.42h1.46c.44 0 .53.22.44.53-.18.85-1.95 3.34-1.95 3.34-.15.25-.21.36 0 .64.15.21.66.65 1 1.04.62.71 1.1 1.3 1.23 1.71.13.42-.07.63-.49.63z"/>
+                                    </svg>
+                                    <span>Группа ВК</span>
+                                </a>
+
+                                <a href="https://t.me/Ivan_Igorevich71" target="_blank" rel="noopener" class="btn btn--social btn--tg">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                                    </svg>
+                                    <span>Telegram</span>
+                                </a>
+
+                                <a href="tel:+79029081296" class="btn btn--gold">
+                                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                    <span>Позвонить</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page" id="page-faq">
+            <div class="container container--narrow">
+                <div class="text-center">
+                    <div class="gold-eyebrow">Полезно знать</div>
+                    <h1 class="section__title">Частые вопросы</h1>
+                    <p class="section__subtitle">Подробные ответы перед визитом к специалисту</p>
+                </div>
+
+                <div class="faq-list" id="faqList">
+                    <div class="faq-item">
+                        <button type="button" class="faq-question">
+                            <span>Какие есть противопоказания к инъекционной косметологии и пирсингу?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>К общим противопоказаниям относятся беременность и период лактации, острые инфекционные заболевания (ОРВИ, обострение герпеса), воспалительные элементы в зоне проведения процедуры, нарушения свёртываемости крови и аутоиммунные заболевания в острой фазе.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question">
+                            <span>Насколько болезненны контурная пластика губ и ботулинотерапия?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Перед коррекцией губ используется эффективная аппликационная анестезия, а препараты содержат мягкий анестетик, поэтому процедура переносится комфортно. Инъекции ботулотоксина выполняются ультратонкими иглами и занимают всего несколько минут.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question">
+                            <span>Как обеспечивается стерильность при пирсинге и процедурах?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Все расходные материалы (иглы, шприцы, салфетки, перчатки) строго одноразовые и вскрываются при вас. Для пирсинга используются гипоаллергенные титановые украшения, а каждый пациент получает подробную памятку по домашнему уходу.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question">
+                            <span>Когда проявляется окончательный эффект после ботокса и филлеров?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Результат контурной пластики филлерами заметен сразу, а окончательно ткани адаптируются через 7–10 дней. Действие ботулотоксина раскрывается постепенно с 3–5 дня и достигает максимума к 14-му дню после процедуры.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button type="button" class="faq-question">
+                            <span>Где можно задать вопрос или связаться напрямую со специалистом?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Связаться напрямую можно по телефону <strong>+7 (902) 908-12-96</strong>, в личных сообщениях ВКонтакте (<strong>vk.ru/ivanmedicina</strong>) или в Telegram (<strong>@Ivan_Igorevich71</strong>).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page" id="page-works">
+            <div class="container">
+                <div class="text-center">
+                    <div class="gold-eyebrow">Реальные результаты</div>
+                    <h1 class="section__title">Мои работы</h1>
+                    <p class="section__subtitle">Эстетическая коррекция «До / После» и художественный пирсинг. Нажмите на фотографию, чтобы рассмотреть детали.</p>
+                </div>
+
+                <div class="works-grid" id="worksGrid"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="lightbox" id="lightbox">
+        <button type="button" class="lightbox__close" id="lightboxClose" aria-label="Закрыть">&times;</button>
+        <img src="" alt="Работа специалиста" class="lightbox__img" id="lightboxImg">
+        <p class="lightbox__caption" id="lightboxCaption"></p>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__col">
+                <div class="logo logo--footer">
+                    <span class="logo__title">Косметолог Иван Игоревич</span>
+                    <span class="logo__subtitle">Косметология • Пирсинг • Массаж</span>
+                </div>
+                <p class="footer__text">Приём в г. Тула, г. Богородицк и г. Ефремов.</p>
+            </div>
+
+            <div class="footer__col">
+                <h4>Разделы сайта</h4>
+                <ul class="footer__links">
+                    <li><a href="/" data-route="/">Главная</a></li>
+                    <li><a href="/about" data-route="/about">Обо мне</a></li>
+                    <li><a href="/faq" data-route="/faq">Частые вопросы</a></li>
+                    <li><a href="/works" data-route="/works">Мои работы</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4>Контакты и соцсети</h4>
+                <ul class="footer__links">
+                    <li>
+                        <a href="tel:+79029081296" class="footer-social-link">
+                            <svg class="icon-svg icon-svg--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span>+7 (902) 908-12-96</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://t.me/Ivan_Igorevich71" target="_blank" rel="noopener" class="footer-social-link">
+                            <svg class="icon-svg icon-svg--sm" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                            </svg>
+                            <span>Telegram: @Ivan_Igorevich71</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://vk.ru/ivanmedicina" target="_blank" rel="noopener" class="footer-social-link">
+                            <svg class="icon-svg icon-svg--sm" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.44-.86-.83-1.24-.94-1.46-.94-.3 0-.38.08-.38.49v1.32c0 .36-.11.57-1.04.57-1.54 0-3.25-.93-4.45-2.67-1.81-2.54-2.3-4.45-2.3-4.84 0-.22.08-.42.49-.42h1.46c.37 0 .51.17.65.56.71 2.06 1.91 3.86 2.4 3.86.18 0 .27-.08.27-.55v-2.14c-.06-.99-.58-1.07-.58-1.42 0-.17.14-.34.37-.34h2.29c.31 0 .42.17.42.53v2.89c0 .31.14.42.23.42.18 0 .34-.11.68-.45 1.05-1.18 1.8-3 1.8-3 .1-.21.27-.42.64-.42h1.46c.44 0 .53.22.44.53-.18.85-1.95 3.34-1.95 3.34-.15.25-.21.36 0 .64.15.21.66.65 1 1.04.62.71 1.1 1.3 1.23 1.71.13.42-.07.63-.49.63z"/>
+                            </svg>
+                            <span>Личная страница ВКонтакте</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://vk.ru/club222325874" target="_blank" rel="noopener" class="footer-social-link">
+                            <svg class="icon-svg icon-svg--sm" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.08 14.27h-1.46c-.55 0-.72-.44-1.71-1.44-.86-.83-1.24-.94-1.46-.94-.3 0-.38.08-.38.49v1.32c0 .36-.11.57-1.04.57-1.54 0-3.25-.93-4.45-2.67-1.81-2.54-2.3-4.45-2.3-4.84 0-.22.08-.42.49-.42h1.46c.37 0 .51.17.65.56.71 2.06 1.91 3.86 2.4 3.86.18 0 .27-.08.27-.55v-2.14c-.06-.99-.58-1.07-.58-1.42 0-.17.14-.34.37-.34h2.29c.31 0 .42.17.42.53v2.89c0 .31.14.42.23.42.18 0 .34-.11.68-.45 1.05-1.18 1.8-3 1.8-3 .1-.21.27-.42.64-.42h1.46c.44 0 .53.22.44.53-.18.85-1.95 3.34-1.95 3.34-.15.25-.21.36 0 .64.15.21.66.65 1 1.04.62.71 1.1 1.3 1.23 1.71.13.42-.07.63-.49.63z"/>
+                            </svg>
+                            <span>Группа ВКонтакте</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer__bottom">
+            <p>© 2026 Косметолог Иван Игоревич. Имеются противопоказания, необходима консультация специалиста.</p>
+        </div>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
