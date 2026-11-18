@@ -1,9 +1,10 @@
-from .base import Base, get_db
+from .base import Base, get_db, SessionLocal
 from .models import Procedures, Categories
 
 __all__ = [
-    'Base',
+    "Base",
     "get_db",
-    'Procedures',
-    'Categories',
+    "Procedures",
+    "Categories",
+    "SessionLocal"
 ]
