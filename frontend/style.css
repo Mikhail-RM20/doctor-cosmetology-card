@@ -966,10 +966,21 @@ img {
     box-shadow: var(--shadow-md);
 }
 
-.work-card__img {
+.work-card__media {
+    position: relative;
     width: 100%;
-    aspect-ratio: 1/1;
+    padding-top: 100%; /* Железный квадрат 1:1 на любом экране */
+    overflow: hidden;
+    background-color: var(--surface-cream);
+}
+
+.work-card__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .work-card__caption {
@@ -1243,5 +1254,64 @@ img {
 
     .footer-social-link .icon-svg {
         margin-top: 0;
+    }
+}
+
+/* --- ИСПРАВЛЕНИЕ МОБИЛЬНОГО МЕНЮ --- */
+@media (max-width: 900px) {
+    .header {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        isolation: isolate;
+    }
+
+    .header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+    }
+
+    .burger {
+        position: relative;
+        z-index: 1005;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    #mainNav {
+        position: fixed;
+        top: 82px;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        width: 100%;
+        height: calc(100vh - 82px);
+        height: calc(100dvh - 82px);
+        max-height: none;
+        min-height: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
+    }
+
+    #mainNav.open {
+        display: flex !important;
+        z-index: 1001;
+    }
+
+    #mainNav > .nav__list,
+    #mainNav > .nav__mobile-contacts {
+        flex-shrink: 0;
+    }
+
+    #mainNav .catalog-menu__procedures {
+        max-height: none;
+        overflow: visible;
     }
 }

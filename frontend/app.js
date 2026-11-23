@@ -308,8 +308,10 @@ function renderWorksGallery() {
     WORKS_GALLERY.forEach(work => {
         const card = document.createElement('div');
         card.className = 'work-card';
-        card.innerHTML = `
-            <img src="/images/works/${work.file}" alt="${work.title}" class="work-card__img" loading="lazy">
+       card.innerHTML = `
+            <div class="work-card__media">
+                <img src="/images/works/${work.file}" alt="${work.title}" class="work-card__img" loading="lazy">
+            </div>
             <div class="work-card__caption">${work.title}</div>
         `;
 
