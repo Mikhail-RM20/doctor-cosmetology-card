@@ -11,7 +11,6 @@ const SOCIAL_LINKS = {
 // Все 21 актуальное фото из папки images/works/
 const WORKS_GALLERY = [
     { file: 'botox_face.jpg', title: 'Ботулинотерапия лба и межбровья (До / После)' },
-    { file: 'clear_face.jpg', title: 'Эстетический уход и улучшение качества кожи' },
     { file: 'cosm_1.jpg', title: 'Контурная пластика губ (До / После)' },
     { file: 'cosm_2.jpg', title: 'Увеличение и коррекция формы губ' },
     { file: 'cosm_3.jpg', title: 'Естественный объём и увлажнение губ' },
@@ -33,12 +32,11 @@ const WORKS_GALLERY = [
     { file: 'septum.jpg', title: 'Пирсинг «Септум»' }
 ];
 
-// Точные карты для 3 кабинетов приёма
-// Точные карты для 3 кабинетов приёма
+// Ссылки на карты для 3 кабинетов приёма (открываются в новой вкладке, без встраивания на сайт)
 const CITY_MAPS = {
-    tula: 'https://yandex.ru/map-widget/v1/?ll=37.625626%2C54.173194&mode=search&ol=biz&oid=34718540165&z=21&lang=ru_RU',
-    bogoroditsk: 'https://yandex.ru/map-widget/v1/?ll=38.136703%2C53.767660&mode=search&poi%5Bpoint%5D=38.136658%2C53.767725&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D17227619407&z=21&lang=ru_RU',
-    efremov: 'https://yandex.ru/map-widget/v1/?ll=38.117000%2C53.145600&mode=search&ol=biz&oid=178778539533&z=16.84&lang=ru_RU'
+    tula: 'https://yandex.ru/maps/?ll=37.625626%2C54.173194&mode=search&ol=biz&oid=34718540165&z=21&lang=ru_RU',
+    bogoroditsk: 'https://yandex.ru/maps/?ll=38.136703%2C53.767660&mode=search&poi%5Bpoint%5D=38.136658%2C53.767725&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D17227619407&z=21&lang=ru_RU',
+    efremov: 'https://yandex.ru/maps/?ll=38.117000%2C53.145600&mode=search&ol=biz&oid=178778539533&z=16.84&lang=ru_RU'
 };
 
 let catalogData = [];
@@ -270,21 +268,16 @@ async function loadProcedureDetail(procedureId) {
     }
 }
 
-// --- 4. ПЕРЕКЛЮЧЕНИЕ ГОРОДОВ НА ЯНДЕКС.КАРТЕ ---
+// --- 4. КАРТЫ: ОТКРЫВАЮТСЯ В НОВОЙ ВКЛАДКЕ (без встраивания и куков на сайте) ---
 function initLocationsMap() {
     const cards = document.querySelectorAll('.location-card');
-    const mapFrame = document.getElementById('yandexMapFrame');
 
     cards.forEach(card => {
-        card.addEventListener('click', (e) => {
-            if (e.target.closest('.location-card__map-link')) return;
-
-            cards.forEach(c => c.classList.remove('active'));
-            card.classList.add('active');
-
+        card.addEventListener('click', () => {
             const city = card.getAttribute('data-city');
-            if (CITY_MAPS[city] && mapFrame) {
-                mapFrame.src = CITY_MAPS[city];
+            const mapUrl = CITY_MAPS[city];
+            if (mapUrl) {
+                window.open(mapUrl, '_blank', 'noopener');
             }
         });
     });
